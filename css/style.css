@@ -40,7 +40,7 @@ hr{
   background-color: black;
   color: aliceblue;
 }
-.buttons:checked{
+.buttons:focus{
   background-color: black;
   color: aliceblue;
 }
