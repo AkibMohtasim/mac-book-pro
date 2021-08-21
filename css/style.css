@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+main{
+  display: flex;
+  margin: 5% 20%;
+}
+
+h3{
+  margin-top: 40px;
+}
+
+hr{
+  margin-left: 10px;
+}
+
+.divided{
+  width: 50%;
+  margin: 20px;
+}
+
+.divided>img{
+  width: 80%;
+  margin-left: 20%;
+}
+
+.buttons{
+  border: 1.5px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.buttons:hover{
+  background-color: black;
+  color: aliceblue;
+}
+.buttons:active{
+  background-color: black;
+  color: aliceblue;
+}
+
+.cost{
+  margin-top: 80px;
+  width: 60%;
+}
+
+.price{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+}
+.price>h3{
+  margin: 0;
+}
+
+.promo-code{
+  margin: 0 10px;
+  margin-top: 80px;
+}
+.promo-code>input{
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.promo-code button{
+  background-color: rgba(228, 20, 20, 0.925);
+  color: wheat;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.total-price{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
