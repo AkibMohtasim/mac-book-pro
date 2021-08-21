@@ -12,10 +12,8 @@ function totalCostChange(){
   const totalPrice = basePriceMac + ramPrice + ssdPrice+ deliveryPrice;
   const totalPriceLast = document.getElementById('total-price');
   totalPriceLast.innerText = totalPrice;
+  document.getElementById('final-price').innerText = totalPrice;
 };
-
-
-//promo code function
 
 
 
@@ -58,7 +56,21 @@ function extraPrice(extraName, componentCost){
 };
 
 
-//cost section
+//promo code function
+document.getElementById('coupon-btn').addEventListener('click', function(){
+  const couponField = document.getElementById('coupon-field').value;
+
+  const totalBottomPrice = document.getElementById('total-price').innerText;
+
+  const totalPriceNum = parseFloat(totalBottomPrice);
+
+  if(couponField == 'stevekaku'){
+    const finalPrice = totalPriceNum - totalPriceNum*0.2;
+    document.getElementById('final-price').innerText = finalPrice;
+  }
+  document.getElementById('coupon-field').value = '';
+});
+
 
 basePrice('ssd-base', 'ssd-cost');
 basePrice('ram-base', 'ram-cost');
@@ -68,21 +80,4 @@ extraPrice('ssd-512','ssd-cost');
 extraPrice('ssd-1Tb','ssd-cost');
 extraPrice("ram-16", 'ram-cost');
 extraPrice("delivery-quick", 'delivery-cost');
-
-
-//promo code Section
-document.getElementById('coupon-btn').addEventListener('click', function(){
-  const couponField = document.getElementById('coupon-field').value;
-
-  const totalPrice = document.getElementById('total-price').innerText;
-
-  const totalPriceNum = parseFloat(totalPrice);
-
-  if(couponField == 'stevekaku'){
-    const finalPrice = totalPriceNum - totalPriceNum*0.2;
-    document.getElementById('final-price').innerText = finalPrice;
-  }
-
-  document.getElementById('coupon-field').value = '';
-});
 
